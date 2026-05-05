@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hada Multispeciality Hospital</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:#fff;
+  color:#333;
+}
+
+:root {
+  --blue:#2f7f9f;
+  --orange:#f58220;
+}
+
+/* Header */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  border-bottom:1px solid #eee;
+}
+
+header img { height:60px; }
+
+.contact {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.phone-line {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.phone-line a {
+  text-decoration:none;
+  color:var(--blue);
+  font-weight:600;
+}
+
+/* Hero */
+.hero {
+  background:var(--blue);
+  color:white;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.btn {
+  background:var(--orange);
+  color:white;
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+}
+
+/* Split */
+.split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  padding:70px 40px;
+}
+
+h2 { color:var(--blue); }
+
+/* Services */
+.services {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.service-box {
+  padding:15px;
+  border:1px solid #eee;
+  border-radius:8px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.service-box i { color:var(--blue); }
+
+/* Doctor */
+.doctor-card {
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.doctor-card img {
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+/* Gallery */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.gallery img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Map */
+.map {
+  padding:60px 40px;
+}
+
+.map-container {
+  position:relative;
+  width:100%;
+  height:350px;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.map-container iframe {
+  position:absolute;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Footer */
+.footer {
+  background:#f8f8f8;
+  padding:25px;
+  text-align:center;
+}
+
+/* Sticky */
+.sticky {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.sticky a {
+  padding:12px;
+  border-radius:50%;
+  color:white;
+}
+
+.call { background:var(--blue); }
+.whatsapp { background:#25D366; }
+
+/* Lightbox */
+#lightbox {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.9);
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+}
+
+/* Animation */
+.fade {
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
+}
+
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  header {
+    flex-direction:column;
+    text-align:center;
+    padding:15px 20px;
+  }
+
+  .split {
+    grid-template-columns:1fr;
+  }
+
+  .gallery {
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+
+  <div class="contact">
+    <div class="phone-line">
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:02673246111">02673 246 111</a>
+    </div>
+    <div class="phone-line">
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+916351775819">+91 63517 75819</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero fade">
+  <h1>Hada Multispeciality Hospital</h1>
+  <p>Advanced Orthopedic & Multispeciality Care You Can Trust</p>
+  <a class="btn" href="tel:+916351775819">Book Appointment</a>
+</section>
+
+<section class="split fade">
+  <div>
+    <h2>About Us</h2>
+    <p>Trusted orthopedic and multispeciality healthcare in Dahod with modern treatment and care.</p>
+  </div>
+
+  <div>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box"><i class="fa-solid fa-bone"></i> Orthopedic</div>
+      <div class="service-box"><i class="fa-solid fa-user-injured"></i> Knee Replacement</div>
+      <div class="service-box"><i class="fa-solid fa-kit-medical"></i> Trauma</div>
+      <div class="service-box"><i class="fa-solid fa-wheelchair"></i> Spine</div>
+      <div class="service-box"><i class="fa-solid fa-tooth"></i> Dental</div>
+      <div class="service-box"><i class="fa-solid fa-brain"></i> Neuro</div>
+    </div>
+  </div>
+</section>
+
+<section class="split fade">
+  <div>
+    <h2>Our Specialist</h2>
+    <div class="doctor-card">
+      <img src="doctor.jpg">
+      <div style="padding:15px;">
+        <h3>Dr. Divyapal Hada</h3>
+        <p>M.B.B.S, M.S Ortho, FAMS</p>
+        <p>12+ Years Experience</p>
+        <p>Orthopedic Specialist</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="hospital1.jpg" onclick="openImage(this.src)">
+      <img src="hospital2.jpg" onclick="openImage(this.src)">
+      <img src="hospital3.jpg" onclick="openImage(this.src)">
+      <img src="hospital4.jpg" onclick="openImage(this.src)">
+      <img src="hospital5.jpg" onclick="openImage(this.src)">
+      <img src="hospital6.jpg" onclick="openImage(this.src)">
+    </div>
+  </div>
+</section>
+
+<section class="map fade">
+  <h2 style="text-align:center;color:var(--blue)">Find Us</h2>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.196034137553!2d74.2696553!3d22.8322357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39611df61f4dafdf%3A0x34e5c0e83a772bb1!2sHada%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1777995088353!5m2!1sen!2sin"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<div class="footer">
+  <p><i class="fa-solid fa-location-dot"></i> Near Radhe Garden, Raliyati Road, Dahod, Gujarat – 389151</p>
+</div>
+
+<div class="sticky">
+  <a class="call" href="tel:+916351775819"><i class="fa-solid fa-phone"></i></a>
+  <a class="whatsapp" href="https://wa.me/916351775819"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openImage(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+}
+
+const fades=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  fades.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
